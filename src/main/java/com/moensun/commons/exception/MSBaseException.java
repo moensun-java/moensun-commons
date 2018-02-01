@@ -13,7 +13,20 @@ public class MSBaseException extends RuntimeException {
     private final String message;
     private final Integer httpCode;
 
-    public MSBaseException( String code, Throwable cause) {
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    public Integer getHttpCode() {
+        return httpCode;
+    }
+
+    public MSBaseException(String code, Throwable cause) {
         super(code, cause);
         this.code = code;
         this.message = null;

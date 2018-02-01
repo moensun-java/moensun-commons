@@ -17,7 +17,7 @@ public class MSException extends MSBaseException {
 	private final String message;
 	private final Integer httpCode;
 
-	private final MSResourceBundle msResourceBundle;
+	private final transient MSResourceBundle msResourceBundle;
 
 	public String getCode() {
 		return code;
