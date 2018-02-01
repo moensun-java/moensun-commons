@@ -33,6 +33,10 @@ public class MSException extends MSBaseException {
 		return httpCode;
 	}
 
+	public MSResourceBundle getMsResourceBundle() {
+		return msResourceBundle;
+	}
+
 	public MSException(String code, Object... params){
 		this(null,null,code,params);
 	}
