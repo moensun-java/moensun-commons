@@ -38,6 +38,29 @@ public class MSPageInfoUtils {
         return bean;
     }
 
+    public static <T,E> MSPageInfo<E> msPageInfo(MSPageInfo<T> pageInfo, List<E> data){
+        MSPageInfo<E> bean = new MSPageInfo<>();
+        bean.setPageNum(pageInfo.getPageNum());
+        bean.setPageSize(pageInfo.getPageSize());
+        bean.setSize(pageInfo.getSize());
+        bean.setStartRow(pageInfo.getStartRow());
+        bean.setEndRow(pageInfo.getEndRow());
+        bean.setTotal(pageInfo.getTotal());
+        bean.setPages(pageInfo.getPages());
+        bean.setList(data);
+        bean.setPrePage(pageInfo.getPrePage());
+        bean.setNextPage(pageInfo.getNextPage());
+        bean.setFirstPage(pageInfo.isFirstPage());
+        bean.setLastPage(pageInfo.isLastPage());
+        bean.setHasPreviousPage(pageInfo.isHasPreviousPage());
+        bean.setHasNextPage(pageInfo.isHasNextPage());
+        bean.setNavigatePages(pageInfo.getNavigatePages());
+        bean.setNavigatepageNums(pageInfo.getNavigatepageNums());
+        bean.setNavigateFirstPage(pageInfo.getNavigateFirstPage());
+        bean.setNavigateLastPage(pageInfo.getNavigateLastPage());
+        return bean;
+    }
+
     public static <T,E> MSPageInfo<E> msPageInfo(PageInfo<T> pageInfo, List<E> data){
         MSPageInfo<E> bean = new MSPageInfo<>();
         bean.setPageNum(pageInfo.getPageNum());
