@@ -13,6 +13,9 @@ import java.util.Map;
  */
 public class ResourceProperties {
 
-    public static Map<String,String>  codeMap = Maps.newHashMap();
+    private ResourceProperties() {
+    }
+
+    public static final Map<String,String>  codeMap = Maps.newHashMap();
 
 }
